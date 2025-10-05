@@ -1,0 +1,143 @@
+/* ===== Reset cơ bản ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#fdf6ff,#e8e0ff); /* nền sáng tím pastel */
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===== Container ===== */
+.container {
+    max-width:1000px;
+    margin:40px auto;
+    padding:30px 25px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== Headings ===== */
+h1,h2 { text-align:center; margin-bottom:20px; color:#6b21a8; } /* màu tím đậm */
+h1.page-title::after {
+    content:"";
+    display:block;
+    width:50px;
+    height:4px;
+    background:#9333ea; /* màu tím tươi hơn */
+    margin:10px auto 0;
+    border-radius:2px;
+}
+
+/* ===== Form đẹp ===== */
+form {
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    background:#f5f0ff; /* tím nhạt */
+    padding:25px 30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    max-width:500px;
+    margin:0 auto 30px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding:14px 18px;
+    border-radius:12px;
+    border:1px solid #ccc;
+    font-size:15px;
+    transition:0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color:#9333ea;
+    box-shadow:0 0 6px rgba(147,51,234,0.3);
+    outline:none;
+}
+
+input[type="submit"] {
+    padding:14px 18px;
+    border:none;
+    border-radius:12px;
+    background:#6b21a8; /* tím đậm */
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+input[type="submit"]:hover {
+    background:#4c1d95;
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(107,33,168,0.3);
+}
+
+input::placeholder { color:#7b8ca1; font-style:italic; }
+
+/* ===== Table ===== */
+table {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+th,td { padding:14px 16px; text-align:left; }
+th { background:#6b21a8; color:#fff; font-weight:600; text-transform:uppercase; }
+tr:nth-child(even){background:#f5f0ff;}
+tr:hover{background:#e0d4ff;}
+
+/* ===== Action buttons ===== */
+td a, td form input[type="submit"] {
+    display:inline-block;
+    padding:6px 12px;
+    font-size:13px;
+    font-weight:500;
+    border-radius:8px;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+td a[href*="update"]{ background:#8b5cf6; color:white; }
+td a[href*="update"]:hover{ background:#7c3aed; }
+td form input[type="submit"]{ background:#ec4899; color:white; }
+td form input[type="submit"]:hover{ background:#be185d; }
+td form { display: inline; margin: 0; padding: 0; background: none; border: none; }
+
+/* ===== Message ===== */
+.message{ padding:12px 15px; border-radius:10px; margin-bottom:20px; text-align:center; font-weight:500; }
+.message.success{ background:#dcfce7; color:#166534; }
+.message.error{ background:#fee2e2; color:#991b1b; }
+
+/* ===== Back Home ===== */
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:10px 16px;
+    border-radius:10px;
+    background:#6b21a8;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.25s;
+    margin-top:20px;
+}
+.back-home:hover{
+    background:#4c1d95;
+    transform:translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width:768px){
+    .container{ padding:20px; }
+    th, td{ font-size:13px; padding:10px 12px; }
+    input[type="submit"], td a{ font-size:12px; padding:8px 10px; }
+}
